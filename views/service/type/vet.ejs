@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../../partials/head.ejs") %>
+</head>
+<body>
+    <header><%- include("../../partials/_nav.ejs") %></header>
+    <main>
+        <div class="jumbotron">
+            <h1>This is vet pages</h1>
+        
+        <!-- <div class="row">
+        <div class="col-md-6 mx-auto">
+            <div class="card card-body">
+                <h3 class="text-center">booking</h3>
+                <form action="/service/vet">
+                <button type="submit" class="btn btn-primary">Get Ticket</button>
+                </form>
+            </div>
+        </div>
+    </div> -->
+    <button id="btn">Get Ticket</button>
+    <p id="show"></p>
+    <script>
+        var num = 1, btn = document.getElementById('btn');
+        btn.onclick = function() {
+            document.getElementById("show").innerHTML = num;
+            //alert(num);
+            num++;
+        }
+    </script>
+    </div>
+    </main>
+    <footer><%- include("../../partials/footer.ejs") %></footer>
+</body>
+</html>

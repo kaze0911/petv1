@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../../../../partials/head.ejs") %>
+</head>
+<body>
+    <header><%- include("../../../../partials/_nav.ejs") %></header>
+    <main>
+        <div class="jumbotron">
+            <div class="container">
+                <div class="card mt-4 mb-4">
+                    <div class="card-body">
+                        <h4 class="card-title mb-1"><%= service.name %></h4>
+                        <div class="card-subtitle text-muted mb-2">
+                            <%= service.createdAt.toLocaleDateString() %>
+                        </div>
+                        <div class="card-text mb-2"><%= service.place %></div>
+                        <div class="card-text mb-2"><%= service.number %></div>
+                        <div class="card-text mb-2"><%= service.price %></div>
+                    </div>
+                </div>
+                <a href="/services" class="btn btn-secondary">All Service</a>
+    
+                
+            </div>
+        </div>
+    </main>
+    <footer><%- include("../../../../partials/footer.ejs") %></footer>
+</body>
+</html>

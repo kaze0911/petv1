@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head.ejs") %>
+</head>
+<body>
+    <header><%- include("../partials/_nav.ejs") %></header>
+    <main>
+        <div class="jumbotron">
+            <h1>我們的產品</h1>
+            <form action="/product/type" method="get">
+                <button type="submit" class="btn btn-info">Go!</button>
+            </form>
+        </div>
+    </main>
+    <footer><%- include("../partials/footer.ejs") %></footer>
+</body>
+</html>

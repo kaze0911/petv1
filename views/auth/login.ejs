@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head.ejs") %>
+</head>
+<body>
+    <header><%- include("../partials/_nav.ejs") %></header>
+    <main>
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div class="card card-body">
+                        <h3 class="text-center">登入</h3>
+                        <form action="/auth/login" method="post">
+                            <div class="form-group">
+                                <label for="user">用戶名稱</label>
+                                <input type="text" name="user" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label for="password">密碼</label>
+                                <input type="password" name="password" class="form-control" />
+                            </div>
+                            <button type="submit" class="btn btn-primary">submit</button>
+                        </form>
+                        <!-- <form action="/auth/email_login" method="get">
+                            <button type="submit" class="btn btn-primary">使用郵箱登入</button>
+                        </form> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer><%- include("../partials/footer.ejs") %></footer>
+</body>
+</html>

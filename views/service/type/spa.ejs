@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../../partials/head.ejs") %>
+</head>
+<body>
+    <header><%- include("../../partials/_nav.ejs") %></header>
+    <main>
+        <div class="jumbotron">
+            <h1>This is spa pages</h1>
+            <a href="/services/new_spa" class="btn btn-success">New Services</a>
+
+                <% spas.forEach(spa => { %>
+                    <div class="card mt-4">
+                        <div class=""card-body>
+                            <h4 class="card-title"><%= spa.name %></h4>
+                            <div class="card-subtitle text-muted mb-2">
+                                <%= spa.createdAt.toLocaleDateString() %>
+                            </div>
+                            <div class="card-text mb-2"><%= spa.place %></div>
+                            <div class="card-text mb-2"><%= spa.number %></div>
+                            <div class="card-text mb-2"><%= spa.price %></div>
+                            <form action="/services/spa/<%= spa.id %>" method="get">
+                                <button type="submit" class="btn btn-primary">Read More</button>            
+                            </form>
+                        </div>
+                    </div>
+                <% }) %>
+        </div>
+    </main>
+    <footer><%- include("../../partials/footer.ejs") %></footer>
+</body>
+</html>

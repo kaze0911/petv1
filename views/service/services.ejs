@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head.ejs") %>
+</head>
+<body>
+    <header><%- include("../partials/_nav.ejs") %></header>
+    <main>
+        <div class="jumbotron">
+            <h1>服務種類</h1>
+            <div class="card mb-2" style="width:400px">
+                <img class="card-img-top" src="img_avatar1.png" alt="Card image">
+                <div class="card-body">
+                  <h4 class="card-title"></h4>
+                  <!-- <p class="card-text">Some example text.</p> -->
+                  <form action="/services/spa" method="get">
+                    <button type="submit" class="btn btn-primary">Go!</button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer><%- include("../partials/footer.ejs") %></footer>
+</body>
+</html>

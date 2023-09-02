@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head.ejs") %>
+</head>
+<body>
+    <header><%- include("../partials/_nav.ejs") %></header>
+    <main>
+        <div class="jumbotron">
+            <div class="container">
+                <h1 class="mb-4">課程列表</h1>
+                <a href="course/new" class="btn btn-success">New Lesson</a>
+
+                <% lessons.forEach(lesson => { %>
+                    <div class="card mt-4">
+                        <div class=""card-body>
+                            <h4 class="card-title"><%= lesson.title %></h4>
+                            <div class="card-subtitle text-muted mb-2">
+                                <%= lesson.createdAt.toLocaleDateString() %>
+                            </div>
+                            <div class="card-text mb-2"><%= lesson.place %></div>
+                            <div class="card-text mb-2"><%= lesson.teacher %></div>
+                            <div class="card-text mb-2"><%= lesson.price %></div>
+                            <a href="course/<%= lesson.id %>" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                <% }) %>
+
+
+
+            </div>
+        </div>
+    </main>
+    <footer><%- include("../partials/footer.ejs") %></footer>
+</body>
+</html>

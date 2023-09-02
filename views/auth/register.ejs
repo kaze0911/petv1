@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head.ejs") %>
+</head>
+<body>
+    <header><%- include("../partials/_nav.ejs") %></header>
+    <main>
+        <div class="jumbotron">
+            <div class="row">
+                <div class="col-md-6 mx-auto">
+                    <div class="card card-body">
+                        <h3 class="text-center">用戶註冊</h3>
+                        <form action="/auth/register" method="post" >
+                            <div class="form-group">
+                                <label for="name">用戶名稱</label>
+                                <input type="text" name="user" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">電郵</label>
+                                <input type="email" name="email" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label for="password">密碼</label>
+                                <input type="password" name="pwd" class="form-control" />
+                            </div>
+                            <button type="submit" class="btn btn-primary">submit</button>
+                        </form>
+                        <form action="/auth/login" method="get" class="d-lg-inline mt-2">
+                            <button type="submit" class="btn btn-info">返回登入</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer><%- include("../partials/footer.ejs") %></footer>
+</body>
+</html>

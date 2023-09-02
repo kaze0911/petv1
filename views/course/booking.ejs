@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include("../partials/head.ejs") %>
+</head>
+<body>
+    <header><%- include("../partials/_nav.ejs") %></header>
+    <main>
+        <div class="jumbotron">
+            <h1>This is activity pages</h1>
+            <!-- <form action="/course/booking" method="post">
+                <label for="courseSel">Choose a course:</label>
+                <select id="courseSel" name="courseSel">
+                    <option value="ClassA">Class A</option>
+                    <option value="ClassB">Class B</option>
+                    <option value="ClassC">Class C</option>
+                </select>
+                <input type="submit">
+            </form> -->
+            <form action="/course/book" method="post">
+                <label for="name">Name</label>
+                <input type="text" name="name" required>
+       
+                <label for="email">Email</label>
+                <input type="email" name="email" required>
+       
+                <label for="date">Date</label>
+                <input type="date" name="date" required>
+       
+                <button type="submit" class="btn btn-primary">Go!</button>
+            </form>
+            <form action="/course/details" method="post">
+                <label for="name">Booking Details</label>
+                <button type="submit" class="btn btn-primary">Go!</button>
+            </form>
+        </div>
+    </main>
+    <footer><%- include("../partials/footer.ejs") %></footer>
+</body>
+</html>
