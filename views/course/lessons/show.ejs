@@ -19,7 +19,10 @@
                         <div class="card-text mb-2"><%= course.price %></div>
                     </div>
                 </div>
-                <a href="/course" class="btn btn-secondary">All Courses</a>
+
+                <form action="/course" method="get" class="d-lg-inline">
+                    <button type="submit" class="btn btn-secondary">回課程列表</button>
+                </form>
                 <!-- <a href="/course/lessons/edit/<%= course.id %>" class="btn btn-info">Edit</a> -->
     
                 
