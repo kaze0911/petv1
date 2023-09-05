@@ -56,10 +56,12 @@ import IndexRoutes from './Routes/index.js';
 import ProductRoutes from './Routes/product.js';
 import ServiceRoutes from './Routes/service.js';
 import CourseRoutes from './Routes/course.js';
-import BlogRoutes from './Routes/blog.js';
+// import BlogRoutes from './Routes/blog.js';
 import AboutRoutes from './Routes/about.js';
 import AuthRoutes from './Routes/auth.js';
 import AccountRoutes from './Routes/account.js';
+import AdminRoutes from './admin/Routes/admin.js';
+import AdminBlog from './admin/Routes/blog.js'
 
 // import AdmIndexRoutes from './Routes/index_adm.js';
 // import AdmAboutRoutes from './Routes/about_adm.js';
@@ -73,10 +75,13 @@ app.use('/', IndexRoutes);
 app.use('/product', ProductRoutes);
 app.use('/services', ServiceRoutes);
 app.use('/course', CourseRoutes);
-app.use('/blog', BlogRoutes);
+// app.use('/blog', BlogRoutes);
 app.use('/about', AboutRoutes);
 app.use('/auth', AuthRoutes);
 app.use('/account', AccountRoutes);
+
+app.use('/admin',AdminRoutes);
+app.use('/admin/A_blog',AdminBlog);
 
 // app.use('/admin', AdmIndexRoutes);
 // app.use('/admin/about', AdmAboutRoutes);

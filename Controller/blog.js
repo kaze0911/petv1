@@ -1,4 +1,4 @@
-import Article from '../Model/blog.js'
+import Article from '../Model/blog/blog.js'
 
 export const GetBlog = async (req, res) =>{
     const GetArticle = await Article.find().sort({createdAt:'desc'})  //降序：新文章一直在頂部 

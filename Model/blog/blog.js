@@ -1,4 +1,6 @@
 import mongoose from 'mongoose';
+
+//文章
 const ArticleSchema = new mongoose.Schema({
     title:{
         type:String,
@@ -16,7 +18,7 @@ const ArticleSchema = new mongoose.Schema({
         type:Date,
         default:Date.now
     }
-})
+});
 
 //用這個模式傳入Article
 const Blog = mongoose.model('Article', ArticleSchema);
