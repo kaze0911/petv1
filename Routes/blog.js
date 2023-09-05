@@ -1,6 +1,6 @@
 import express from 'express';
 const Routes = express.Router();
-import Blog from '../Model/blog.js';
+import Blog from '../Model/blog/blog.js';
 
 import { GetBlog,GetNew,PostArticle,GetId,DeleteArticle,GetEdit,EditArticle } from '../Controller/blog.js';
 
